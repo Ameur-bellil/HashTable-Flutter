@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text("Add Result"),
-          content: Text(statusMessage),
+          content: Text("Added successfully ${key}"),
           actions: [
             TextButton(
               child: Text("OK"),
@@ -141,7 +141,7 @@ class _HomePageState extends State<HomePage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text("Remove Result"),
-          content: Text(statusMessage),
+          content: Text("Removed successfully ${key}"),
           actions: [
             TextButton(
               child: Text("OK"),
@@ -184,7 +184,7 @@ class _HomePageState extends State<HomePage> {
     int index = hashFunction(key);
     bool found = table[index].contains(key);
     setState(() {
-      statusMessage = found ? "'$key' found" : "'$key' not found";
+      statusMessage = found ? "$key'found" : "$key not found";
     });
     showDialog(
       context: context,
